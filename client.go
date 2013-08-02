@@ -63,6 +63,7 @@ func (b *Bucket) Do(k string, f func(mc *memcached.Client, vb uint16) error) err
 			}
 		}
 	}
+	return nil
 }
 
 type gathered_stats struct {
@@ -456,4 +457,5 @@ func (b *Bucket) WaitForPersistence(k string, cas uint64, deletion bool) error {
 			return ErrTimeout
 		}
 	}
+	return nil
 }

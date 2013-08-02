@@ -79,6 +79,7 @@ func (cp *connectionPool) GetWithTimeout(d time.Duration) (*memcached.Client, er
 			return nil, TimeoutError
 		}
 	}
+	return nil, nil
 }
 
 func (cp *connectionPool) Get() (*memcached.Client, error) {
